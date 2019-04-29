@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ExtensionPackages>
+        <ExtensionPackage dependsOn="" description="c3.JS visualization graphs" minimumThingWorxVersion="8.3.0" name="c3Graphs" packageVersion="1.0.11" vendor=""> 
+        </ExtensionPackage>
+    </ExtensionPackages>
+    <Widgets>
+        <Widget name="c3graph">
+            <UIResources>
+                <FileResource description="" file="c3graph.ide.js" isDevelopment="true" isRuntime="false" type="JS"/>
+                <FileResource description="" file="c3graph.ide.css" isDevelopment="true" isRuntime="false" type="CSS"/>
+                <FileResource description="" file="c3graph.runtime.js" isDevelopment="false" isRuntime="true" type="JS"/>
+                <FileResource description="" file="c3graph.runtime.css" isDevelopment="false" isRuntime="true" type="CSS"/>
+                <FileResource description="" file="/c3/c3.min.js" isDevelopment="false" isRuntime="true" type="JS"/>
+                <FileResource description="" file="/c3/c3.min.css" isDevelopment="false" isRuntime="true" type="CSS"/>
+                <FileResource description="" file="/c3/c3.js" isDevelopment="false" isRuntime="true" type="JS"/>
+                <FileResource description="" file="/c3/c3.css" isDevelopment="false" isRuntime="true" type="CSS"/>
+                <FileResource description="" file="/c3/d3.v5.min.js" isDevelopment="false" isRuntime="true" type="JS"/>
+            </UIResources>
+        </Widget>
+    </Widgets>
+</Entities>
