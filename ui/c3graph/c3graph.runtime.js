@@ -6,6 +6,7 @@ TW.Runtime.Widgets.c3graph= function () {
 		// If you want it to change depending on properties that the user
 		// has set, you can use this.getProperty(propertyName). In
 		// this example, we'll just return static HTML
+		
 		return 	'<div class="widget-content widget-c3graph">' +
 				'<div id="chart"></div>'+
 				'</div>';
@@ -14,7 +15,7 @@ TW.Runtime.Widgets.c3graph= function () {
 	this.afterRender = function () {
 		// NOTE: this.jqElement is the jquery reference to your html dom element
 		// 		 that was returned in renderHtml()
-
+		this.drawChart();
 		// get a reference to the value element
 		valueElem = this.jqElement.find('.c3graph-property');
 		// update that DOM element based on the property value that the user set
@@ -29,7 +30,7 @@ TW.Runtime.Widgets.c3graph= function () {
 			valueElem.text(updatePropertyInfo.SinglePropertyValue);
 			thisWidget.data = updatePropertyInfo.ActualDataRows;
 			//this.setProperty('Data', updatePropertyInfo.SinglePropertyValue);
-			this.drawChart();
+			
 		}
 	};
 
