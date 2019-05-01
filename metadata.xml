@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <ExtensionPackages>
-        <ExtensionPackage dependsOn="" description="c3.JS visualization graphs" minimumThingWorxVersion="8.3.0" name="c3Graphs" packageVersion="1.0.11" vendor=""> 
+        <ExtensionPackage dependsOn="" description="D3-based reusable chart library" minimumThingWorxVersion="8.3.0" name="c3Graphs" packageVersion="1.0.11" vendor=""> 
         </ExtensionPackage>
     </ExtensionPackages>
     <Widgets>
@@ -15,7 +15,7 @@
                 <FileResource description="" file="/c3/c3.min.css" isDevelopment="false" isRuntime="true" type="CSS"/>
                 <FileResource description="" file="/c3/c3.js" isDevelopment="false" isRuntime="true" type="JS"/>
                 <FileResource description="" file="/c3/c3.css" isDevelopment="false" isRuntime="true" type="CSS"/>
-                <FileResource description="" file="/c3/d3.v5.min.js" isDevelopment="false" isRuntime="true" type="JS"/>
+                <FileResource description="" file="/c3/docs/js/d3-5.8.2.min.js" isDevelopment="false" isRuntime="true" type="JS"/>
             </UIResources>
         </Widget>
     </Widgets>
