@@ -7,7 +7,7 @@ TW.IDE.Widgets.c3graph = function () {
 	this.widgetProperties = function () {
 		return {
 			'name': 'C3Graph',
-			'description': '',
+			'description': 'Region graph with Timeseries',
 			'category': ['Common'],
 			'supportsAutoResize':true,
 			'properties': {
