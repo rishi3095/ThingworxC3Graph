@@ -1,32 +1,27 @@
 TW.IDE.Widgets.c3graph = function () {
 
-	this.widgetIconUrl = function() {
-		return  "'../Common/extensions/c3Graphs/ui/c3graph/c3.png'";
+	this.widgetIconUrl = function () {
+		return "'../Common/extensions/c3Graphs/ui/c3graph/images/c3.png'";
 	};
 
 	this.widgetProperties = function () {
-		return {
-			'name': 'C3Graph',
+		var properties = {
+			'name': 'C3.JS Graph',
 			'description': 'Region graph with Timeseries',
 			'category': ['Common'],
-			'supportsAutoResize':true,
+			'supportsAutoResize': true,
 			'properties': {
 				'Data': {
-                    'description': 'Data source',
-                    'isBindingTarget': true,
-                    'isEditable': false,
-                    'baseType': 'INFOTABLE',
-                    'isVisible': true,
-                    'warnIfNotBoundAsTarget': false
-				},
-				'NumberOfSeries': {
-					'description': 'Desired number of series in this chart',
-                    'defaultValue': 1,
-                    'baseType': 'NUMBER',
-                    'isVisible': true
+					'description': 'Data source',
+					'isBindingTarget': true,
+					'isEditable': false,
+					'baseType': 'INFOTABLE',
+					'isVisible': true,
+					'warnIfNotBoundAsTarget': false
 				}
 			}
 		}
+		return properties;
 	};
 
 	this.afterSetProperty = function (name, value) {
@@ -49,9 +44,13 @@ TW.IDE.Widgets.c3graph = function () {
 		// return any HTML you want rendered for your widget
 		// If you want it to change depending on properties that the user
 		// has set, you can use this.getProperty(propertyName).
-		return 	'<div class="widget-content widget-c3graph">' +
-					'<span class="c3graph-property">' + this.getProperty('C3Graph Property') + '</span>' +
-				'</div>';
+		// return 	'<div class="widget-content widget-c3graph">' +
+		// 			'<span class="c3graph-property">' + this.getProperty('C3Graph Property') + '</span>' +
+		// 		'</div>';
+		return '<div class="widget-content widget-c3graph">'
+			+ '<table height="100%" width="100%"><tr><td valign="middle" align="center">'
+			+ '<span>C3.JS Graph</span>'
+			+ '</td></tr></table></div>';
 	};
 
 	this.afterRender = function () {

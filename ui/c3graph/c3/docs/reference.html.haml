@@ -52,7 +52,6 @@
           = partial :reference_menu_item, locals: { id: 'data.colors' }
           = partial :reference_menu_item, locals: { id: 'data.hide' }
           = partial :reference_menu_item, locals: { id: 'data.empty.label.text' }
-          -#= partial :reference_menu_item, locals: { id: 'data.filter' }
           = partial :reference_menu_item, locals: { id: 'data.selection.enabled' }
           = partial :reference_menu_item, locals: { id: 'data.selection.grouped' }
           = partial :reference_menu_item, locals: { id: 'data.selection.multiple' }
@@ -122,13 +121,10 @@
 
           %li Grid
           = partial :reference_menu_item, locals: { id: 'grid.x.show' }
-          -#= partial :reference_menu_item, locals: { id: 'grid.x.type' }
           = partial :reference_menu_item, locals: { id: 'grid.x.lines' }
           = partial :reference_menu_item, locals: { id: 'grid.y.show' }
           = partial :reference_menu_item, locals: { id: 'grid.y.lines' }
           = partial :reference_menu_item, locals: { id: 'grid.y.ticks' }
-          -#= partial :reference_menu_item, locals: { id: 'grid.focus.show' }
-          -#= partial :reference_menu_item, locals: { id: 'grid.lines.front' }
 
           %li Region
           = partial :reference_menu_item, locals: { id: 'regions' }
@@ -150,9 +146,7 @@
           = partial :reference_menu_item, locals: { id: 'tooltip.format.value' }
           = partial :reference_menu_item, locals: { id: 'tooltip.position' }
           = partial :reference_menu_item, locals: { id: 'tooltip.contents' }
-          -#= partial :reference_menu_item, locals: { id: 'tooltip.init.show' }
-          -#= partial :reference_menu_item, locals: { id: 'tooltip.init.x' }
-          -#= partial :reference_menu_item, locals: { id: 'tooltip.init.position' }
+          = partial :reference_menu_item, locals: { id: 'tooltip.horizontal' }
 
           %li Subchart
           = partial :reference_menu_item, locals: { id: 'subchart.show', experimental: true }
@@ -186,7 +180,6 @@
           %li Bar
           = partial :reference_menu_item, locals: { id: 'bar.width' }
           = partial :reference_menu_item, locals: { id: 'bar.width.ratio' }
-          -#= partial :reference_menu_item, locals: { id: 'bar.width.max' }
           = partial :reference_menu_item, locals: { id: 'bar.zerobased' }
 
           %li Pie
@@ -255,19 +248,14 @@
           = partial :reference_menu_item, locals: { id: 'api.data.names' }
           = partial :reference_menu_item, locals: { id: 'api.data.colors' }
           = partial :reference_menu_item, locals: { id: 'api.data.axes' }
-          -#= partial :reference_menu_item, locals: { id: 'api.category' }
-          -#= partial :reference_menu_item, locals: { id: 'api.categories' }
           = partial :reference_menu_item, locals: { id: 'api.x' }
           = partial :reference_menu_item, locals: { id: 'api.xs' }
-          -#= partial :reference_menu_item, locals: { id: 'api.color' }
           = partial :reference_menu_item, locals: { id: 'api.axis.labels' }
           = partial :reference_menu_item, locals: { id: 'api.axis.min' }
           = partial :reference_menu_item, locals: { id: 'api.axis.max' }
           = partial :reference_menu_item, locals: { id: 'api.axis.range' }
           = partial :reference_menu_item, locals: { id: 'api.legend.show' }
           = partial :reference_menu_item, locals: { id: 'api.legend.hide' }
-          -#= partial :reference_menu_item, locals: { id: 'api.tooltip.show' }
-          -#= partial :reference_menu_item, locals: { id: 'api.tooltip.hide' }
           = partial :reference_menu_item, locals: { id: 'api.zoom' }
           = partial :reference_menu_item, locals: { id: 'api.unzoom' }
           = partial :reference_menu_item, locals: { id: 'api.zoom.enable' }
@@ -2872,6 +2860,25 @@
 
       %section
         %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.horizontal' }
+        %p Show the tooltips based on the horizontal position of the mouse.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              tooltip: {
+              &nbsp;&nbsp;horizontal: true
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/tooltip_horizontal.html" ) Horizontal tooltip
+      %hr
+
+      %section
+        %h3
           = partial :reference_item_link, locals: { id: 'subchart.show', experimental: true }
         %p Show sub chart on the bottom of the chart.
         %h5 Default:
@@ -3611,6 +3618,30 @@
               &nbsp;&nbsp;scaleFormat: 'pow10'
               &nbsp;&nbsp;// or d3.format("d")
               &nbsp;&nbsp;// or a function
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/chart_stanford.html" ) Stanford Chart
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'stanford.scaleValues' }
+        %p Set the values for stanford color scale axis tick text.
+        %br
+        %p This option accepts a function that returns an array of numbers.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              stanford: {
+              &nbsp;&nbsp;scaleValues: (minValue, maxValue) => {
+              &nbsp;&nbsp;&nbsp;&nbsp;const step = (maxValue - minValue) / 10;
+              &nbsp;&nbsp;&nbsp;&nbsp;return d3.range(minValue, maxValue + step, step);
+              &nbsp;&nbsp;}
               }
         %h5 Example:
         %ul

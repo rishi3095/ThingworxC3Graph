@@ -219,6 +219,7 @@ ChartInternal.prototype.getDefaultConfig = function () {
         stanford_scaleMax: undefined,
         stanford_scaleWidth: undefined,
         stanford_scaleFormat: undefined,
+        stanford_scaleValues: undefined,
         stanford_colors: undefined,
         stanford_padding: {
             top: 0,
@@ -235,6 +236,7 @@ ChartInternal.prototype.getDefaultConfig = function () {
         tooltip_format_title: undefined,
         tooltip_format_name: undefined,
         tooltip_format_value: undefined,
+        tooltip_horizontal: undefined,
         tooltip_position: undefined,
         tooltip_contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
             return this.getTooltipContent ? this.getTooltipContent(d, defaultTitleFormat, defaultValueFormat, color) : '';

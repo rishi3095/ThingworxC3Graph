@@ -1,5 +1,19 @@
 /* Place custom CSS styling for C3Graph widget in Composer in this file */
+.widget-c3graph-helper {
+    background: url(images/helper.png) no-repeat #d5c8f8 center center;
+    width: 640px;
+    height: 240px;
+}
 
 .widget-c3graph {
+    background-color: #b2ccec;
+    color: #1f3a6d;
+    font-weight: bold;
+}
 
+.widget-c3graph span {
+    background: url(images/c3js.ide.png) no-repeat top center;
+    display: inline-block;
+    padding-top: 34px;
+    text-shadow: 1px 1px 1px #fff;
 }
